@@ -14,14 +14,25 @@ namespace myconsole
             Duck[] ducks = new Duck[]
             {
                 new MallardDuck(),
-                new RedheadDuck()
+                new RedheadDuck(),
+                new RubberDuck(),
+                new DecoyDuck(),
             };
 
             foreach (Duck duck in ducks)
             {
-                Console.WriteLine(duck.Quack());
                 Console.WriteLine(duck.Swim());
                 Console.WriteLine(duck.Display());
+                if (duck is IFlyable)
+                {
+                    Console.WriteLine((duck as IFlyable).Fly());
+
+                }
+                if (duck is IQuackable)
+                {
+                    Console.WriteLine((duck as IQuackable).Quack());
+                }
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
