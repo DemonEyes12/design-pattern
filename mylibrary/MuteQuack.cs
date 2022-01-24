@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    public interface IFlyable
+    class MuteQuack:IQuackBehavior
     {
-        string Fly();
+        public string Quack()
+        {
+            return "" + this.GetType();
+        }
     }
 }

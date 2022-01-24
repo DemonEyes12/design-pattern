@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    public class DecoyDuck:Duck
+    class FlyNoWay:IFlyBehavior
     {
-        public override string Display()
+        public string Fly()
         {
-            flyBehavior = new FlyNoWay();
-            return "Display" + this.GetType();
+            return "" + this.GetType();
         }
     }
 }

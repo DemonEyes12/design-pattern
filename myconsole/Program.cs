@@ -18,23 +18,24 @@ namespace myconsole
                 new RubberDuck(),
                 new DecoyDuck(),
             };
-
+/*
             foreach (Duck duck in ducks)
             {
                 Console.WriteLine(duck.Swim());
                 Console.WriteLine(duck.Display());
-                if (duck is IFlyable)
+                if (duck is IFlyBehavior)
                 {
-                    Console.WriteLine((duck as IFlyable).Fly());
+                    Console.WriteLine((duck as IFlyBehavior).Fly());
 
                 }
-                if (duck is IQuackable)
+                if (duck is IQuackBehavior)
                 {
-                    Console.WriteLine((duck as IQuackable).Quack());
+                    Console.WriteLine((duck as IQuackBehavior).Quack());
                 }
                 Console.WriteLine();
             }
             Console.ReadKey();
+*/
         }
     }
 }
