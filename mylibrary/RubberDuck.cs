@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    public class RubberDuck:Duck,IQuackBehavior
+    public class RubberDuck:Duck
     {
-        public override string Display()
+        public RubberDuck()
         {
-            return "Display" + this.GetType();
-        }
-        public string Quack()
-        {
-            return "quack" + this.GetType();
+            quackBehavior = new Squeak();
+            flyBehavior = new FlyNoWay();
+         
         }
     }
 }

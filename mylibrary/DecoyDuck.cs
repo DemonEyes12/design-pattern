@@ -8,10 +8,10 @@ namespace mylibrary
 {
     public class DecoyDuck:Duck
     {
-        public override string Display()
+        public DecoyDuck()
         {
             flyBehavior = new FlyNoWay();
-            return "Display" + this.GetType();
+            quackBehavior = new MuteQuack();
         }
     }
 }

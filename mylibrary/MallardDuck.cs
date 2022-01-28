@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    public class MallardDuck : Duck,IFlyBehavior,IQuackBehavior
+    public class MallardDuck : Duck
     {
-        public override string Display()
+        public MallardDuck()
         {
-            return "Display" + this.GetType();
-        }
-        public string Fly()
-        {
-            return "fly" + this.GetType();
-        }
-        public string Quack()
-        {
-            return "quack" + this.GetType();
+            quackBehavior = new DQuack();
+            flyBehavior = new FlyWithWings();
+      
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    class DQuack:IQuackBehavior
+    public class DQuack:IQuackBehavior
     {
         public string Quack()
         {

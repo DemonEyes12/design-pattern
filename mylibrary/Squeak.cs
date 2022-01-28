@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mylibrary
 {
-    class Squeak:IQuackBehavior
+    public class Squeak:IQuackBehavior
     {
         public string Quack()
         {

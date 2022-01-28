@@ -8,8 +8,12 @@ namespace mylibrary
 {
     public abstract class Duck
     {
-       protected IFlyBehavior flyBehavior;
-       protected IQuackBehavior quackBehavior;
+       public IFlyBehavior flyBehavior;
+       public IQuackBehavior quackBehavior;
+        public string Display()
+        {
+            return "Display" + this.GetType()  + flyBehavior.Fly() + quackBehavior.Quack();
+        }
         public void setFlyBehavior(IFlyBehavior fb)
         {
             flyBehavior = fb;
@@ -22,7 +26,6 @@ namespace mylibrary
         {
             return "Swim" + this.GetType();
         }
-        public abstract string Display();
 
     }
 }
